@@ -75,9 +75,16 @@ def reruncode():
             print("Invalid input!")
 
     elif user_chpice == 's':
-        with open(name+".txt") as op1:
-            for lines in op1:
-                print(lines)
+        del_or_show = input("What do you want? 'd' for deleting statistics amd 's' for showing the statistics")
+        if del_or_show == 's':
+            with open(name+".txt") as op1:
+                for lines in op1:
+                    print(lines)
+
+        elif del_or_show == 'd':
+            with open(name+".txt", "w") as op2:
+                op2.write("")
+            print("Successfully cleared!")
     rerun_or_stop = input("Wanna run again? 'y' or 'n'!")
     if rerun_or_stop == 'y':
         reruncode()
