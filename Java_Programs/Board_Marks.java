@@ -18,13 +18,18 @@ public class Board_Marks {
             sub5 = sc.nextFloat();
             System.out.println("Enter the total marks of the five subjects");
             total_marks = sc.nextFloat();
-            float temp = sub1 + sub2 + sub3 + sub4 + sub5;
-            if (temp > total_marks) {
+            float total = sub1 + sub2 + sub3 + sub4 + sub5;
+            if (total > total_marks) {
                 System.out.format("Don't Underestimate me! I am very smart!\nYour total marks cannot exceed "+total_marks+"!");
             }
-            else if (temp <= )
+            else if (total <= total_marks) {
+                float temp = total / total_marks;
+                cent = temp * 100;
+                System.out.printf("Your percentage is %f", cent);
+            }
 
-        } catch (Exception error1){
+        }
+        catch (Exception error1){
             System.out.println("You made something go wrong!");
         }
     }
