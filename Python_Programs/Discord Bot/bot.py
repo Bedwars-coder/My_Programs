@@ -61,4 +61,4 @@ async def clearwarn(ctx, *, member: discord.Member):
         op.write("")
     await ctx.send(f"Cleared all warnings for {member}!")
 
-client.run("Nzk0NDg3NTUyNTA1MTUxNDg5.X-7iMQ.Q2LABl45DwoxLnCTMt5XQTTFBA4")
+client.run("Bot's token as a string")
