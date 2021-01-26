@@ -17,7 +17,11 @@ try:
         elif operator=='div' and num1==56 and num2 ==6:
             print("The Quotient is 4")
         elif operator=='div':
-            print("The Quotient is ",num1/num2)
+            try:
+                print("The Quotient is ",num1/num2)
+
+            except ZeroDivisionError:
+                print("Don't even try to divide a number by 0!")
         else:
             print("Enter a valid input MAN!")
 
@@ -28,5 +32,7 @@ try:
         rerun()
     else:
         exit("Exited successfully!")
+
+    rerun()
 except Exception as error1:
     print("Hmmm, Something went wrong. Please consider trying again!")
