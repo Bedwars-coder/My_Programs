@@ -76,15 +76,20 @@ def reruncode():
 
     elif user_chpice == 's':
         del_or_show = input("What do you want? 'd' for deleting statistics amd 's' for showing the statistics")
-        if del_or_show == 's':
-            with open(name+".txt") as op1:
-                for lines in op1:
-                    print(lines)
+        try:
+            if del_or_show == 's':
+                with open(name+".txt") as op1:
+                    for lines in op1:
+                        print(lines)
 
-        elif del_or_show == 'd':
-            with open(name+".txt", "w") as op2:
-                op2.write("")
-            print("Successfully cleared!")
+            elif del_or_show == 'd':
+                with open(name+".txt", "w") as op2:
+                    op2.write("")
+                print("Successfully cleared!")
+
+        except FileNotFoundError:
+            print("An error occurred.\nBut still you can fix it and I will help you.")
+            print("Try these methods:-\n1)Enter the name that you had entered when you started playing.\n")
     rerun_or_stop = input("Wanna run again? 'y' or 'n'!")
     if rerun_or_stop == 'y':
         reruncode()
