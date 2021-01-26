@@ -19,16 +19,20 @@ def reruncode():
                 print("Kindly enter a valid input!")
 
         def ret(feret):
-            if feret == 1:
-                with open("dibya_food.txt") as op:
-                    for lines in op:
-                        print(lines)
-            elif feret == 2:
-                with open("dibya_exer.txt") as op:
-                    for lines in op:
-                        print(lines)
-            else:
-                print("Kindly enter a valid input!")
+            try:
+                if feret == 1:
+                    with open("dibya_food.txt") as op:
+                        for lines in op:
+                            print(lines)
+                elif feret == 2:
+                    with open("dibya_exer.txt") as op:
+                        for lines in op:
+                            print(lines)
+                else:
+                    print("Kindly enter a valid input!")
+                    
+            except FileNotFoundError:
+                print("I could not find your name in my list! Sorry!")
 
         def clear():
             clr = int(input("What would you like to clear? 1 for food and 2 for exercise!"))
