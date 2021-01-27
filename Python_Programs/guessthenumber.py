@@ -1,9 +1,10 @@
+import random
 def replay():
     try:
 
         print("Welcome to the number guessing game.")
-        print("You have 5 attemps to guess the correct number.")
-        n = 18
+        print("You have 5 attempts to guess the correct number.")
+        n = random.randrange(0, 100)
         attempts = 1
         while attempts <= 5:
             num = int(input("Enter the correct number:\n"))
@@ -19,6 +20,7 @@ def replay():
 
         if attempts > 5:
             print("You lost!")
+            print(f"The number was {n}!")
 
 
         rerun = input("Do you want to play again?('y' or 'n')")
@@ -34,4 +36,3 @@ def replay():
     except Exception as error1:
         print("Something went wrong!")
 replay()
-
