@@ -12,10 +12,7 @@ def reruncode():
     comp_points = 0
     user_chpice = input("Press 'p' for playing and 's' for statistics!")
     name = input("Enter your name: ")
-    """
-    A lot of variables were used in this project. And I got little ideas about naming the variables. You need to 
-    understand those odd variables. Also make some pull requests for those variables. 
-    """
+    
     if user_chpice == 'p':
         while attempts <= 10:
             user_input = input("Enter 'snake', 'water' or 'gun'!").lower()
